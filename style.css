@@ -140,8 +140,97 @@ a:hover {
   font-size: 20px;
 }
 
+.links-container {
+  padding-top: 50px;
+}
+.links-container a {
+  padding: 0px 18px;
+}
 .links-container i {
   font-family: 'FontAwesome';
   font-style: normal;
   color: var(--white-color);
+}
+
+/* About Section  */
+.about {
+  background: var(--green-color);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 100px;
+}
+
+.about img {
+  height: 350px;
+  width: 315px;
+  border-radius: 15%;
+  padding-bottom: 20px;
+}
+
+.about h1 {
+  font-size: 40px;
+  padding-bottom: 20px;
+}
+
+.about p {
+  font-size: 20px;
+  width: 100%;
+  text-align: left;
+  padding: 0 10% 10px 30%;
+}
+
+@media (max-width: 750px) {
+  .about p {
+    padding-left: 10%;
+  }
+}
+
+/* Skill Section */
+.skills {
+  background: var(--green-color);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 40px;
+}
+
+.skills h1 {
+  font-size: 30px;
+}
+
+.skills p {
+  font-size: 18px;
+}
+.skill-box {
+  text-align: center;
+  padding: 20px;
+}
+
+.skill-box p {
+  padding-top: 10px;
+}
+
+.fa-html5:hover,
+.fa-css3-alt:hover,
+.fa-js:hover,
+.fa-react:hover,
+.fa-bootstrap:hover,
+.fa-python:hover,
+.fa-git-alt:hover,
+.fa-github:hover,
+.fa-mobile:hover {
+  color: var(--lightBlue-color);
+}
+
+.skill-list i {
+  font-family: 'FontAwesome';
+  color: var(--darkBlue-color);
+  font-style: normal;
+}
+
+.skill-list-1,
+.skill-list-2 {
+  display: flex;
+  align-items: center;
 }
