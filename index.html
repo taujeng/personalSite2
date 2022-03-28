@@ -13,24 +13,24 @@
 
 </head>
 <body>
-  <nav>
+  <nav class="navbar">
     <input type="checkbox" id="check">
     <label for="check" class="checkbtn">
       <i class="material-icons" id="hamburger">
         menu
       </i>
     </label>
-    <label class="logo">Tau Jeng</label>
-    <ul>
-      <li><a class="active" href="#">About</a></li>
-      <li><a href="#">Skills</a></li>
-      <li><a href="#">Projects</a></li>
-      <li><a href="#">Resume</a></li>
-      <li><a href="#">Other</a></li>
+    <a href="#intro"><label class="logo">Tau Jeng</label></a>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <!-- <li><a href="#resume">Resume</a></li>
+      <li><a href="#">Other</a></li> -->
     </ul>
   </nav>
   <!-- Intro Section -->
-  <section class="intro">
+  <section class="intro" id="intro">
     <h1>Hey! I'm Tau</h1>
     <p>Front End Developer</p>
     <small>I'm driven ~ quick to adapt ~ and a team player.</small>
@@ -42,18 +42,22 @@
   </section>
 
   <!-- About Section -->
-  <section class="about">
-    <h1>About me</h1>
-    <img src="tau.JPG" alt="tau">
-    <p>I'm a front-end developer currently working at a start-up called Pathfinder.</p>
+  <section class="about" id="about">
+    <h1 class="section-title">About me</h1>
+    <img src="./img/about/tau.JPG" alt="tau">
+    <p>I'm a <b>front-end developer</b> currently working at a <b>start-up called Pathfinder.</b></p>
     <p>Recently, we were selected as one of the top 15 contestants (out of 400+)</p>
     <p> in the entrepreneur competition Tiger Launch!</p>
-    <p>Check us out at <a href="http://pathfinder.fyi">pathfinder.fyi!</a></p>
+    <p>Check us out at <b><a href="http://pathfinder.fyi">pathfinder.fyi!</a></b></p>
     <p>At Pathfinder, I work closely with the UI/UX team to bring Figma designs to life.</p>
     <p>And in my free time, I enjoy playing games competitively (dota2, chess).</p>
+    <a class="resume-link" id="resume" href="/Tau's Resume.pdf" target="_blank">View my resume<span class="material-icons resume-arrow">arrow_forward</span></a>
   </section>
-  <section class="skills">
-    <h1>Skills and Technologies</h1>
+
+
+  <!-- Skills Section -->
+  <section class="skills" id="skills">
+    <h1 class="section-title">Skills and Technologies</h1>
     <p>The skills and tech I use to bring products to life.</p>
     <div class="skill-list">
       <div class="skill-list-1">
@@ -98,21 +102,55 @@
         </div>
   
       </div>
-        
-
     </div>
   </section>
-  <section class="projects">
-    <h1>Projects</h1>
-    <div class="project-1">
-      <div class="project-left">
-        <h1>Pathfinder</h1>
-        <p>list of skills</p>
-        <a href="">link to project github, live site</a>
-        <h2>description of project</h2>
+  <section class="projects" id="projects">
+    <h1 class="section-title">Featured Projects</h1>
+    <div class="project-display">
+      <div class="project-standard">
+        <div class="project-left">
+          <p class="project-name">Pathfinder</p>
+          <a href="http://pathfinder.fyi" target="_blank">Pathfinder Site</a>
+
+          <p class="project-skills">HTML, CSS, JavaScript, React.js, wireframing, web responsiveness, data visualization</p>
+          <h4>description of project</h2>
+          <p>Pathfinder is an online tech community platform made to help students and professionals find their future careers.</p>
+          <p>TigerLaunch 2022: Top 15 Finalist in the LA Regionals</p>
+          <p>At Pathfinder, I work closely with the UI/UX team to bring Figma designs to life.</p>
+        </div>
+        <div class="project-right">
+          <img class="project-1-pic" src="./img/projects/newPF.jpg" alt="Pathfinder.fyi">
+        </div>
       </div>
-      <div class="project-right">
-        <div>img, move to the righthand side</div>
+      <div class="project-standard">
+        <div class="project-left">
+          <p class="project-name">Wordle</p>
+          <span><a href="http://pathfinder.fyi" target="_blank">Live Site</a></span>
+          <span><a href="https://github.com/taujeng/wordle" target="_blank">Github</a></span>
+          <p class="project-skills">HTML, CSS, JavaScript, web responsiveness, virtual keyboard, DOM</p>
+          <h4>description of project</h4>
+          <p>Wordle, the popular word game that is being played all over the world now!</p>
+          <p>Personally, I'd like to add some changes to Wordle, from better word curation to different modes, and so I set out to
+            make my own version of Wordle. But for starters, I've made a copy of Wordle. Give it a try!
+          </p>
+        </div>
+        <div class="project-right">
+          <img class="project-2-pic" src="./img/projects/wordle.jpg" alt="Pathfinder.fyi">
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="footer">
+    <div class="footer-bar">
+      <div class="footer-left">
+        <p>Created by Tau Jeng</p>
+      </div>
+      <div class="footer-right">
+        <div class="links-container">
+          <a href="https://www.linkedin.com/in/tau-jeng-b9a25b173/" target="_blank"><i class="fa-brands fa-linkedin fa-2x"></i></a>
+          <a href="https://github.com/taujeng" target="_blank"><i class="fa-brands fa-github-square fa-2x"></i></a>
+          <a href="mailto: taujeng.1@gmail.com" target="_blank"><i class="fa-solid fa-envelope fa-2x"></i></a>
+        </div>
       </div>
     </div>
   </section>

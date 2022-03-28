@@ -6,7 +6,10 @@
   text-decoration: none;
   list-style: none;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
+
+/* Commonly Used */
 
 :root {
   /* Color Pallete */
@@ -18,7 +21,16 @@
 
 body {
   font-family: 'Montserrat', sans-serif;
+  overflow-x: hidden;
 }
+
+.section-title {
+  color: var(--darkBlue-color);
+  font-size: 40px;
+  padding-bottom: 20px;
+}
+
+/* Navigation Bar/Header */
 
 nav {
   background: var(--darkBlue-color);
@@ -36,27 +48,31 @@ label.logo {
   line-height: 80px;
   padding: 0 100px;
   font-weight: bold;
+  cursor: pointer;
 }
 
-nav ul {
+.logo:hover {
+  color: var(--lightBlue-color);
+}
+
+.nav-links {
   float: right;
-  margin-right: 20px;
+  margin-right: 100px;
 }
 
-nav ul li {
+.nav-links li {
   display: inline-block;
   line-height: 80px;
   margin: 0 5px;
 }
 
-nav ul li a {
+.nav-links a {
   color: var(--white-color);
   font-size: 17px;
   text-transform: uppercase;
 }
 
-a.active,
-a:hover {
+.nav-links a:hover {
   background: #6b7aa1;
 }
 
@@ -152,6 +168,12 @@ a:hover {
   color: var(--white-color);
 }
 
+.links-container .fa-linkedin:hover,
+.links-container .fa-github-square:hover,
+.links-container .fa-envelope:hover {
+  color: var(--darkBlue-color);
+}
+
 /* About Section  */
 .about {
   background: var(--green-color);
@@ -168,16 +190,25 @@ a:hover {
   padding-bottom: 20px;
 }
 
-.about h1 {
-  font-size: 40px;
-  padding-bottom: 20px;
-}
-
 .about p {
   font-size: 20px;
   width: 100%;
   text-align: left;
   padding: 0 10% 10px 30%;
+}
+
+.resume-link {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  font-family: 'Hubballi', cursive;
+  font-size: 25px;
+  margin-top: 10px;
+}
+
+.resume-link:hover {
+  transform: translateX(5px);
+  font-style: italic;
 }
 
 @media (max-width: 750px) {
@@ -192,11 +223,7 @@ a:hover {
   display: flex;
   align-items: center;
   flex-direction: column;
-  padding: 40px;
-}
-
-.skills h1 {
-  font-size: 30px;
+  padding: 100px 40px 40px 40px;
 }
 
 .skills p {
@@ -233,4 +260,118 @@ a:hover {
 .skill-list-2 {
   display: flex;
   align-items: center;
+}
+
+/* Project Section */
+.projects {
+  padding: 100px 100px 0;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background: var(--green-color);
+}
+
+.projects a {
+  padding: 0 10px 0 0;
+  font-family: 'Hubballi', cursive;
+  font-size: 23px;
+}
+
+.projects a:hover {
+  font-style: italic;
+}
+
+.project-standard {
+  display: flex;
+  flex: 1;
+  flex-direction: row;
+  padding-bottom: 100px;
+}
+
+.project-name {
+  width: 30%;
+  font-size: 35px;
+  padding: 50px 0 20px 25px;
+  color: var(--lightBlue-color);
+}
+
+.project-skills {
+  font-style: italic;
+  font-family: 'Hubballi', cursive;
+  font-size: 22px;
+  padding-top: 15px;
+}
+
+.project-left {
+  width: 40%;
+  margin-left: 200px;
+}
+
+@media (max-width: 750px) {
+  .projects {
+    padding: 0 20px;
+  }
+
+  .project-standard {
+    flex-direction: column;
+  }
+
+  .project-left {
+    width: 600px;
+    margin-left: 0;
+  }
+}
+
+.project-left h4 {
+  padding: 20px 0 10px 25px;
+  font-size: 25px;
+}
+
+.project-left p {
+  padding-bottom: 15px;
+}
+
+.project-1-pic {
+  height: 400px;
+  width: 400px;
+  border-radius: 10%;
+  margin-left: 200px;
+}
+
+.project-1-pic:hover,
+.project-2-pic:hover {
+  -webkit-box-shadow: 3px 8px 15px 5px rgba(0, 0, 0, 0.68);
+  box-shadow: 3px 8px 15px 5px rgba(0, 0, 0, 0.68);
+}
+
+.project-2-pic {
+  height: 500px;
+  width: 300px;
+  border-radius: 5%;
+  margin-left: 350px;
+}
+
+/* Footer */
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 20px 0;
+  background-color: var(--darkBlue-color);
+}
+
+.footer .links-container {
+  padding: 0;
+}
+
+.footer .fa-linkedin:hover,
+.footer .fa-github-square:hover,
+.footer .fa-envelope:hover {
+  color: var(--lightBlue-color);
+}
+
+.footer p {
+  color: var(--white-color);
+  padding: 0 0 10px 17px;
 }

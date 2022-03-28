@@ -4,13 +4,14 @@ Remaking my personal site, but this time I hope to make it a lot cleaner. Also m
 
 To Do:
 
-- [ ] Wireframe of the new site.
-- [ ] Decide on color pallete.
+- [x] Wireframe of the new site.
+- [x] Decide on color pallete.
 - [ ] Nav bar
 - - [ ] Nav bar links
-- [ ] Intro Section
-- [ ] About Section
-- [ ] Skills Section
+- [x] Intro Section
+- [x] About Section
+- [x] Skills Section
 - [ ] Projects Section
 - [ ] Resume Section
+- - [ ] add links to PDF
 - [ ] Other Section
