@@ -1,0 +1,321 @@
+@import url('https://fonts.googleapis.com/css2?family=Hubballi&display=swap');
+
+* {
+  margin: 0;
+  font-family: 'Hubballi', cursive;
+}
+
+.header {
+  width: 100%;
+  height: 20%;
+  /* border-bottom: 1px solid black; */
+}
+
+.headerWrapper {
+  display: flex;
+  align-items: center;
+  margin: 20px 20px 0;
+  justify-content: space-between;
+}
+
+.title {
+  font-size: 42px;
+  font-weight: 600;
+}
+
+/* Header Buttons  */
+.topLeft {
+  position: relative;
+}
+
+/* Modals */
+.material-icons {
+  cursor: pointer;
+}
+
+.modal-title {
+  font-size: 35px;
+}
+
+.modal {
+  /* using fixed instead of absolute, bc we want the modal to follow
+  the user as user scrolls up and down */
+  position: fixed;
+  /* centering the modal */
+  /* first centers the top left of our modal */
+  top: 50%;
+  left: 50%;
+  /* now move the modal -50% in the x direction, -50% in y direction */
+  /* the 50% corresponds to size of container, as opposed to size of entire screen
+  which is what top and left were doing */
+  /* scale of 0 hides it */
+  width: 400px;
+  height: 500px;
+  transform: translate(-50%, -50%) scale(0);
+  transition: 200ms ease-in-out;
+  border: 1px solid black;
+  border-radius: 10px;
+  z-index: 10;
+  background-color: #fbfbfd;
+  max-width: 85%;
+  max-height: 75%;
+}
+
+/* we are using scale instead of display: none 
+  so we can use transition */
+
+.modal.active {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.modal-header {
+  padding: 10px 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid black;
+  text-align: center;
+  display: block;
+}
+
+.modal-header .title {
+  font-size: 1.25 rem;
+  font-weight: bold;
+}
+
+.close-modal {
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background: none;
+  font-size: 2.55rem;
+  font-weight: bold;
+  color: crimson;
+  position: fixed;
+  bottom: 0;
+  left: 45%;
+}
+
+.modal-body {
+  padding: 10px 15px;
+}
+
+.modal-body p {
+  font-size: 17px;
+}
+
+.overlay {
+  position: fixed;
+  /* by default, doesn't show up */
+  opacity: 0;
+  /* to make the modal fill the entire screen: */
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 2;
+  background-color: rgba(0, 0, 0, 0.5);
+  /* make it so you can click thru the overlay */
+  pointer-events: none;
+  transition: 200ms ease-in-out;
+}
+
+.overlay.active {
+  /* can now see the overlay, and can't click thru it */
+  opacity: 1;
+  pointer-events: all;
+}
+
+/* Modal Stats */
+
+.stats-number {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.stats-top {
+  text-align: center;
+}
+
+.stats-overview {
+  display: flex;
+  text-align: center;
+  justify-content: space-around;
+  margin: 30px 10px;
+}
+
+.stats-number {
+  text-align: center;
+  margin-bottom: 5px;
+  font-size: 30px;
+}
+
+.stats-guess {
+  margin: 5px;
+  font-size: 25px;
+}
+
+/* Body CSS */
+
+.bodyContainer {
+  margin: 25px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  /* width: 450px;
+  height: 550px;
+  display: flex;
+  align-items: center;
+  flex-direction: column; */
+}
+
+.rowContainer {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  /* justify-content: space-evenly; */
+}
+
+.box {
+  color: white;
+  background-color: lightslategray;
+  display: inline;
+  height: 55px;
+  width: 55px;
+  line-height: 50px;
+  margin-right: 2px;
+  border: 1px outset;
+  border-radius: 10px;
+  font-size: 30px;
+}
+
+.box.correct {
+  background-color: green;
+}
+
+.box.almost {
+  background-color: rgb(175, 175, 4);
+}
+
+.box.wrong {
+  background-color: black;
+}
+
+/* Keyboard CSS */
+
+.container {
+  margin: 0;
+  width: 100%;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.use-keyboard-input {
+  height: 200px;
+  width: 500px;
+}
+
+.keyboard {
+  /* floating on everything else. ensure kb remains visible
+  while you scroll down the page */
+  position: fixed;
+  /* place at the bottom */
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  padding: 5px 0;
+  /* this is the only time you specify the color. 
+  will be using other shades of this color */
+  /* dark green: #004134 */
+  background: #59788e;
+  box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
+  user-select: none;
+  transition: bottom 0.4s;
+}
+
+.keyboard--hidden {
+  bottom: -100%;
+}
+
+.keyboard__keys {
+  text-align: center;
+}
+
+.keyboard__key {
+  height: 45px;
+  /* to keep things responsive */
+  width: 8%;
+  /* for larger screen monitors */
+  max-width: 90px;
+  margin: 3px;
+  border-radius: 4px;
+  border: none;
+  /* still working w the color from .keyboard, making it lighter */
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  /* 1.05 rem = 5% larger than root element size */
+  font-size: 1.05rem;
+  /* remove outlines when mobile user touches */
+  outline: none;
+  cursor: pointer;
+  /* next 3 lines for fully centering the icon within the key */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  /* align icon keys with letter keys */
+  vertical-align: top;
+  padding: 0;
+  /* on mobile, by default, when you click, it has a blue outline
+  this removes it; */
+  -webkit-tap-highlight-color: transparent;
+  position: relative;
+}
+
+.keyboard__key.correct {
+  background-color: green !important;
+}
+
+.keyboard__key.almost {
+  background-color: rgb(175, 175, 4);
+}
+
+.keyboard__key.wrong {
+  background-color: black;
+}
+
+.keyboard__key:active {
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.keyboard__key--wide {
+  width: 12%;
+}
+
+.keyboard__key--extra-wide {
+  width: 36%;
+  max-width: 500px;
+}
+
+/* has the white circle */
+/* after pseudoclass is the virtual element made in css */
+.keyboard__key--activatable::after {
+  content: '';
+  top: 10px;
+  right: 10px;
+  /* need parent to be relative */
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background: rgba(0, 0, 0, 0.4);
+  border-radius: 50%;
+}
+
+.keyboard__key--active::after {
+  background-color: #08ff00;
+}
+
+.keyboard__key--dark {
+  background: rgba(0, 0, 0, 0.25);
+}
