@@ -197,6 +197,15 @@ label.logo {
   padding: 0 10% 10px 30%;
 }
 
+#profile-img {
+  margin: 40px 0;
+}
+
+/* Resume */
+#resume {
+  padding-top: 100px;
+}
+
 .resume-link {
   display: flex;
   align-items: center;
