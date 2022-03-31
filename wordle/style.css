@@ -50,7 +50,7 @@
   which is what top and left were doing */
   /* scale of 0 hides it */
   width: 400px;
-  height: 500px;
+  height: 600px;
   transform: translate(-50%, -50%) scale(0);
   transition: 200ms ease-in-out;
   border: 1px solid black;
