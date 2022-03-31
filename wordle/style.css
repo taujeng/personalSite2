@@ -126,6 +126,15 @@
   pointer-events: all;
 }
 
+/* Modal Rules */
+.bot {
+  padding-bottom: 5px;
+}
+
+.both {
+  padding: 5px 0;
+}
+
 /* Modal Stats */
 
 .stats-number {
