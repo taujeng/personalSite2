@@ -8,7 +8,7 @@
   box-sizing: border-box;
   scroll-behavior: smooth;
   overflow-x: hidden;
-  overflow: visible;
+  /* overflow: visible; */
 }
 
 /* Commonly Used */
@@ -107,7 +107,7 @@ label.logo {
   ul {
     position: fixed;
     width: 100%;
-    height: 40vh;
+    height: 50vh;
     background: #2c3e50;
     top: 80px;
     left: -100%;
@@ -286,7 +286,13 @@ label.logo {
 
 @media (max-width: 750px) {
   .skill {
-    padding: 0 10%;
+    padding: 0 5%;
+  }
+  .skill-list {
+    width: 400px;
+  }
+  .skill-box {
+    width: 130px;
   }
 }
 
@@ -298,6 +304,7 @@ label.logo {
 
 /* Project Section */
 .projects {
+  width: 100%;
   padding: 100px 100px 0;
   display: flex;
   align-items: center;
@@ -343,22 +350,26 @@ label.logo {
 
 @media (max-width: 750px) {
   .projects {
-    padding: 0 10%;
-  }
-
-  .project-standard {
-    flex-direction: column;
-    align-items: center;
     padding: 0 40px;
   }
 
+  .project-standard {
+    width: 400px;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 0px;
+  }
+  .project-name {
+    width: 100%;
+  }
+
   .project-left {
-    width: 600px;
+    width: 100%;
     margin-left: 0;
   }
 
   .project-right img {
-    transform: translateX(-100px);
+    transform: translateX(-128px);
     z-index: 1;
 
     margin: 50px 0 50px 250px;
@@ -392,6 +403,12 @@ label.logo {
   width: 300px;
   border-radius: 5%;
   margin-left: 250px;
+}
+
+@media (max-width: 750px) {
+  #featured-projects {
+    padding-left: 75px;
+  }
 }
 
 /* Footer */
