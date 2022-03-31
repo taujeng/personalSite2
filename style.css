@@ -13,8 +13,6 @@
 /* Commonly Used */
 
 :root {
-  touch-action: none;
-  height: 100%;
   /* Color Pallete */
   --darkBlue-color: #11324d;
   --lightBlue-color: #6b7aa1;

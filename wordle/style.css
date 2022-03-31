@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Hubballi&display=swap');
 
+:root {
+  touch-action: none;
+  height: 100%;
+}
+
 * {
   margin: 0;
   font-family: 'Hubballi', cursive;
