@@ -8,6 +8,7 @@
   box-sizing: border-box;
   scroll-behavior: smooth;
   overflow-x: hidden;
+  /* overflow: visible; */
 }
 
 /* Commonly Used */
@@ -40,8 +41,11 @@ nav {
   position: fixed;
   top: 0;
   z-index: 10;
-  -webkit-box-shadow: 3px 8px 15px 5px rgba(0, 0, 0, 0.68);
-  box-shadow: 3px 8px 15px 5px rgba(0, 0, 0, 0.68);
+  box-shadow: 1px 11px 14px -1px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 1px 11px 14px -1px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 1px 11px 14px -1px rgba(0, 0, 0, 0.75);
+  /* -webkit-box-shadow: 3px 8px 15px 5px rgba(0, 0, 0, 0.68);
+  box-shadow: 3px 8px 15px 5px rgba(0, 0, 0, 0.68); */
 }
 
 label.logo {
@@ -296,12 +300,6 @@ label.logo {
   }
 }
 
-/* .skill-list-1,
-.skill-list-2 {
-  display: flex;
-  align-items: center;
-} */
-
 /* Project Section */
 .projects {
   width: 100%;
@@ -330,7 +328,7 @@ label.logo {
 }
 
 .project-name {
-  width: 30%;
+  width: 35%;
   font-size: 35px;
   padding: 50px 0 20px 25px;
   color: var(--lightBlue-color);
@@ -389,19 +387,22 @@ label.logo {
   height: 400px;
   width: 400px;
   border-radius: 10%;
+  margin: 20px;
   margin-left: 200px;
 }
 
 .project-1-pic:hover,
 .project-2-pic:hover {
-  -webkit-box-shadow: 3px 8px 15px 5px rgba(0, 0, 0, 0.68);
-  box-shadow: 3px 8px 15px 5px rgba(0, 0, 0, 0.68);
+  box-shadow: 1px 9px 9px -1px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 1px 9px 9px -1px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 1px 9px 9px -1px rgba(0, 0, 0, 0.75);
 }
 
 .project-2-pic {
   height: 500px;
   width: 300px;
   border-radius: 5%;
+  margin: 20px;
   margin-left: 250px;
 }
 
