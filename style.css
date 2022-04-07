@@ -338,10 +338,10 @@ label.logo {
 }
 
 .links-container {
-  padding-top: 50px;
+  padding-top: 150px;
 }
 .links-container a {
-  padding: 0px 18px;
+  padding: 0 40px 0;
 }
 .links-container i {
   font-family: 'FontAwesome';
@@ -355,16 +355,43 @@ label.logo {
   color: var(--darkBlue-color);
 }
 
+.float-icon {
+  display: inline-block;
+  animation: float 5s ease-in-out infinite;
+}
+.links-container .fa-github-square {
+  animation-delay: 0.5s;
+}
+
+.links-container .fa-envelope {
+  animation-delay: 1s;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-30px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
 @media (max-width: 750px) {
   #intro {
     padding: 5% 10% 10%;
   }
   .intro h1,
   .intro p {
-    padding-left: 35px;
+    text-align: center;
   }
   .intro small {
     padding-left: 20px;
+  }
+  .links-container a {
+    padding: 0 20px;
   }
 }
 
@@ -621,5 +648,6 @@ label.logo {
 
 .footer p {
   color: var(--white-color);
-  padding: 0 0 10px 17px;
+  text-align: center;
+  padding: 0 0 10px 0px;
 }
