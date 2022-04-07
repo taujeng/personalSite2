@@ -7,8 +7,7 @@
   list-style: none;
   box-sizing: border-box;
   scroll-behavior: smooth;
-  overflow-x: hidden;
-  /* overflow: visible; */
+  overflow: visible;
 }
 
 /* Commonly Used */
@@ -23,6 +22,180 @@
 
 body {
   font-family: 'Montserrat', sans-serif;
+  overflow-x: hidden;
+}
+
+/* New Nav Bar */
+
+html,
+body {
+  height: 100%;
+}
+
+.top-nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--darkBlue-color);
+  color: #fff;
+  height: 80px;
+  padding: 1em;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 10;
+  box-shadow: 1px 11px 14px -1px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 1px 11px 14px -1px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 1px 11px 14px -1px rgba(0, 0, 0, 0.75);
+}
+
+.menu {
+  display: flex;
+  flex-direction: row;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu > li {
+  margin: 0 1rem;
+}
+
+.menu-button-container {
+  display: none;
+  height: 100%;
+  width: 30px;
+  cursor: pointer;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#menu-toggle {
+  display: none;
+}
+
+.menu-button,
+.menu-button::before,
+.menu-button::after {
+  display: block;
+  background-color: #fff;
+  position: absolute;
+  height: 4px;
+  width: 30px;
+  transition: transform 400ms cubic-bezier(0.23, 1, 0.32, 1);
+  border-radius: 2px;
+}
+
+.menu-button::before {
+  content: '';
+  margin-top: -8px;
+}
+
+.menu-button::after {
+  content: '';
+  margin-top: 8px;
+}
+
+#menu-toggle:checked + .menu-button-container .menu-button::before {
+  margin-top: 0px;
+  transform: rotate(405deg);
+}
+
+#menu-toggle:checked + .menu-button-container .menu-button {
+  background: rgba(255, 255, 255, 0);
+}
+
+#menu-toggle:checked + .menu-button-container .menu-button::after {
+  margin-top: 0px;
+  transform: rotate(-405deg);
+}
+
+label.logo {
+  color: var(--white-color);
+  font-size: 35px;
+  line-height: 80px;
+  padding: 0 100px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.nav-links a {
+  color: var(--white-color);
+  font-size: 20px;
+  text-transform: uppercase;
+}
+
+.nav-links a:hover {
+  color: #6b7aa1;
+}
+
+.logo:hover {
+  color: var(--lightBlue-color);
+}
+
+.nav-icons {
+  font-family: 'FontAwesome';
+  color: var(--white-color);
+}
+
+.nav-icons i {
+  font-style: normal;
+  font-size: 25px;
+  padding: 0 20px;
+}
+
+@media (max-width: 750px) {
+  .menu-button-container {
+    display: flex;
+  }
+  .menu {
+    position: absolute;
+    top: 0;
+    margin-top: 80px;
+    left: 0;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+  #menu-toggle ~ .menu li {
+    /* display: none; */
+    height: 0;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+  }
+  #menu-toggle:checked ~ .menu li {
+    /* display: flex; */
+    border: 1px solid var(--white-color);
+    height: 2.5em;
+    padding: 0.5em;
+    transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+  }
+  .menu > li {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 1em 0;
+    width: 100%;
+    color: var(--white-color);
+    background-color: #222;
+    background-color: rgb(17, 50, 77, 99%);
+  }
+  .menu > li:not(:last-child) {
+    border-bottom: 1px solid #444;
+  }
+
+  label.logo {
+    padding: 0;
+  }
+  .nav-icons i {
+    padding: 0 35px;
+  }
 }
 
 .section-title {
@@ -31,9 +204,9 @@ body {
   padding-bottom: 20px;
 }
 
-/* Navigation Bar/Header */
+/* OLD Navigation Bar/Header */
 
-nav {
+/* nav {
   overflow: visible;
   background: var(--darkBlue-color);
   height: 80px;
@@ -44,8 +217,6 @@ nav {
   box-shadow: 1px 11px 14px -1px rgba(0, 0, 0, 0.75);
   -webkit-box-shadow: 1px 11px 14px -1px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 1px 11px 14px -1px rgba(0, 0, 0, 0.75);
-  /* -webkit-box-shadow: 3px 8px 15px 5px rgba(0, 0, 0, 0.68);
-  box-shadow: 3px 8px 15px 5px rgba(0, 0, 0, 0.68); */
 }
 
 label.logo {
@@ -137,7 +308,7 @@ label.logo {
   #check:checked ~ ul {
     left: 0;
   }
-}
+} */
 
 /* Intro Section */
 .intro {
@@ -150,10 +321,11 @@ label.logo {
   justify-content: center;
   width: 100%;
   color: var(--white-color);
+  padding-bottom: 100px;
 }
 
 .intro h1 {
-  padding-bottom: 50px;
+  padding-bottom: 75px;
   font-size: 70px;
 }
 .intro p {
@@ -185,7 +357,14 @@ label.logo {
 
 @media (max-width: 750px) {
   #intro {
-    padding: 0 10%;
+    padding: 5% 10% 10%;
+  }
+  .intro h1,
+  .intro p {
+    padding-left: 35px;
+  }
+  .intro small {
+    padding-left: 20px;
   }
 }
 
@@ -290,13 +469,13 @@ label.logo {
 
 @media (max-width: 750px) {
   .skill {
-    padding: 0 5%;
+    padding: 0 40px;
   }
   .skill-list {
-    width: 400px;
+    width: 375px;
   }
   .skill-box {
-    width: 130px;
+    width: 125px;
   }
 }
 
@@ -346,34 +525,6 @@ label.logo {
   margin-left: 200px;
 }
 
-@media (max-width: 750px) {
-  .projects {
-    padding: 0 40px;
-  }
-
-  .project-standard {
-    width: 400px;
-    flex-direction: column;
-    align-items: center;
-    padding: 0 0px;
-  }
-  .project-name {
-    width: 100%;
-  }
-
-  .project-left {
-    width: 100%;
-    margin-left: 0;
-  }
-
-  .project-right img {
-    transform: translateX(-128px);
-    z-index: 1;
-
-    margin: 50px 0 50px 250px;
-  }
-}
-
 .project-left h4 {
   padding: 20px 0 10px 25px;
   font-size: 25px;
@@ -409,6 +560,42 @@ label.logo {
 @media (max-width: 750px) {
   #featured-projects {
     padding-left: 75px;
+  }
+
+  .projects {
+    padding: 20% 10px;
+  }
+
+  .project-standard {
+    width: 350px;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 0px;
+  }
+  .project-name {
+    width: 100%;
+  }
+
+  .project-left {
+    width: 100%;
+    margin: 0;
+    padding: 0 10px;
+  }
+
+  .project-right img {
+    z-index: 1;
+
+    /* margin: 50px 0 50px 250px; */
+    /* transform: translateX(-128px); */
+    margin: 50px 0 50px 0px;
+  }
+  .project-1-pic {
+    height: 300px;
+    width: 300px;
+  }
+  .project-2-pic {
+    height: 437.5px;
+    width: 262.5px;
   }
 }
 
