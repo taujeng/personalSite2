@@ -1,7 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Hubballi&display=swap');
 
 :root {
-  touch-action: none;
+  /* prevents ALL extra user interactions
+  touch-action: none; */
   height: 100%;
 }
 
@@ -215,9 +216,34 @@
   background-color: black;
 }
 
+/* Pop Up Message */
+#result-popup {
+  visibility: hidden;
+  position: absolute;
+  margin-top: 160px;
+  background: white;
+  font-size: 35px;
+  text-transform: uppercase;
+}
+
+#result-popup.appear {
+  visibility: visible;
+  animation: hideAnimation 0s ease-in 5s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes hideAnimation {
+  to {
+    visibility: hidden;
+    width: 0;
+    height: 0;
+  }
+}
+
 /* Keyboard CSS */
 
 .container {
+  touch-action: manipulation;
   margin: 0;
   width: 100%;
   height: 300px;
