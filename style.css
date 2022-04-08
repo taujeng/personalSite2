@@ -381,14 +381,21 @@ label.logo {
 
 @media (max-width: 750px) {
   #intro {
-    padding: 5% 10% 10%;
+    padding: 0 10% 10%;
   }
   .intro h1,
   .intro p {
     text-align: center;
+    padding-bottom: 40px;
+  }
+  .intro h1 {
+    padding-top: 60px;
   }
   .intro small {
     padding-left: 20px;
+  }
+  .links-container {
+    padding-top: 50px;
   }
   .links-container a {
     padding: 0 20px;
