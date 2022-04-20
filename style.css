@@ -314,7 +314,10 @@ label.logo {
 .intro {
   height: 100vh;
   /* height: calc(100vh - 80px); */
-  background: var(--lightBlue-color);
+  /* background: var(--lightBlue-color); */
+  background: linear-gradient(
+    to bottom, #6889FF,var(--lightBlue-color)
+  );
   display: flex;
   flex-direction: column;
   align-items: center;
