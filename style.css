@@ -589,6 +589,14 @@ label.logo {
   padding-bottom: 15px;
 }
 
+.project-0-pic {
+  height: 400px;
+  width: 600px;
+  border-radius: 10%;
+  margin: 20px;
+  margin-left: 200px;  
+}
+
 .project-1-pic {
   height: 400px;
   width: 400px;
