@@ -84,20 +84,33 @@
   <section class="about" id="about">
     <h1 class="section-title">About me</h1>
     <img id="profile-img" src="./img/about/tau.JPG" alt="tau">
-    <p>I'm a <b>front-end developer</b> currently working at a <b>start-up called Pathfinder.</b></p>
-    <p>Recently, we were selected as one of the top 15 contestants (out of 400+)</p>
-    <p> in the entrepreneur competition Tiger Launch!</p>
-    <p>Check us out at <b><a target="_blank" href="http://pathfinder.fyi">pathfinder.fyi!</a></b></p>
-    <p>At Pathfinder, I work closely with the UI/UX team to bring Figma designs to life.</p>
-    <p>And in my free time, I enjoy playing games competitively (dota2, chess).</p>
-    <!-- // google drive resume link -->
-    <div  id="resume" >
-      <a class="resume-link" href="https://docs.google.com/document/d/1x0VfLkpGRqr-Jo-mKwvY3CFD2ArWvOeNhuDUcuBEyPU/edit?usp=share_link" target="_blank">
-        View my resume<span class="material-icons resume-arrow">arrow_forward</span>
-      </a>
+    <div class="about-text">
+      <p>I'm a front-end developer currently working at a start-up called Pathfinder.</p>
+      <br>
+      <!-- <p>Recently, we were selected as one of the top 15 contestants (out of 400+)</p>
+      <p> in the entrepreneur competition Tiger Launch!
+      Check us out at <b><a target="_blank" href="http://pathfinder.fyi">pathfinder.fyi!</a></b></p>
+      <br> -->
+      <p>At Pathfinder, I work closely with the UI/UX team to bring Figma designs to life, and to implement new features.</p>
+      <br>
+      <p>And in my free time, I enjoy playing games competitively (dota2, chess).</p>
+  
     </div>
   </section>
 
+  <!-- Resume Section -->
+  <section class="resume" id="resume">
+    <h1 class="section-title">Resume</h1>
+    <a class="resume-link" href="https://docs.google.com/document/d/e/2PACX-1vQMbq_gbfH4TYYa46nkFHoHvq63vWdKNTW4R2kZUKSJXQN7jAKcaius6oyMoVDCXNR5UJMoFPsCfYXA/pub" target="_blank">
+      Open in new tab<span class="material-icons resume-arrow">arrow_forward</span>
+    </a>
+    <div >
+      <iframe class="resume-irl" src="https://docs.google.com/document/d/e/2PACX-1vQMbq_gbfH4TYYa46nkFHoHvq63vWdKNTW4R2kZUKSJXQN7jAKcaius6oyMoVDCXNR5UJMoFPsCfYXA/pub?embedded=true" ></iframe>
+
+    </div>
+
+
+  </section>
 
   <!-- Skills Section -->
   <section class="skills" id="skills">
@@ -147,51 +160,64 @@
     <div class="project-display">
       <div class="project-standard">
         <div class="project-left">
-          <p class="project-name">Bounty Sheet</p>
-          <a href="http://bountysheet.com" target="_blank">Live Site</a>
-
-          <p class="project-skills">HTML, CSS, JavaScript, React.js - useReducer, wireframing, local storage</p>
-          <p>Bounty Sheet is a to do list with additional functions that I've always wanted. Each task is a bounty.</p>
-          <p>There's a time component: a timer/stopwatch on the top right. This time can be saved to it's corresponding bounty.</p>
-          <p>Each completed bounty is "cashed in", and is saved in the stats modal.</p>
-          <p>All information is stored in the local storage.</p>
-        </div>
-        <!-- <div class="project-right">
-          <img class="project-0-pic" src="./img/projects/BS.jpg" alt="bountysheet.com">
-        </div> -->
-      </div>
-      <div class="project-standard">
-        <div class="project-left">
-          <p class="project-name">Pathfinder</p>
-          <a href="http://pathfinder.fyi" target="_blank">Pathfinder Site</a>
-
-          <p class="project-skills">HTML, CSS, JavaScript, React.js, wireframing, web responsiveness, data visualization</p>
-          <p>Pathfinder is an <b>online tech community platform</b> made to help students and professionals find their future careers.
-            In our testimonials section, users <b>share their experiences</b> and what they do on a day-to-day basis at their tech jobs.
-            The overview section lists out the skills needed for each job title.
-          </p>
-          <p>TigerLaunch 2022: Top 15 Finalist in the LA Regionals</p>
-          <p>At Pathfinder, I work closely with the UI/UX team to bring Figma designs to life.</p>
+          <div class="project-left-content">
+            <p class="project-name">Bounty Sheet</p>
+            <a href="http://bountysheet.com" target="_blank">Live Site</a>
+  
+            <p class="project-skills">HTML, CSS, JavaScript, React.js - useReducer, API - ChatGPT, local storage, Netlify</p>
+            <p>Bounty Sheet is a todo list with additional functions that I've always wanted. Each task is a bounty.</p>
+            <p>Don't know what to do? Give ChatGPT a topic, and it'll return three possible bounties for you to consider.</p>
+            <p>Keep track of the time used for each bounty with the timer/stopwatch. This time can be saved to it's corresponding bounty.</p>
+            <p>Each completed bounty is "cashed in", and a record of the day's completed bounties is shown in the daily modal.</p>
+            <p>All information is stored in the local storage, and a summary is shown in the stats modal.</p>
+  
+          </div>
         </div>
         <div class="project-right">
-          <img class="project-1-pic" src="./img/projects/newPF.jpg" alt="Pathfinder.fyi">
+          <iframe class="loom-video" src="https://www.loom.com/embed/cb9c38277407402bbcfcf2f86bf3f26a"  frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen ></iframe>
         </div>
       </div>
       <div class="project-standard">
         <div class="project-left">
-          <p class="project-name">Wordle</p>
-          <span><a href="wordle/index.html" target="_blank">Live Site</a></span>
-          <span><a href="https://github.com/taujeng/wordle" target="_blank">Github</a></span>
-          <p class="project-skills">HTML, CSS, JavaScript, web responsiveness, virtual keyboard, DOM</p>
-          <p>Wordle, the popular word game that is being played all around the world!</p>
-          <p>Personally, I'd like to add some changes to Wordle, from better word curation to different modes, and so I set out to
-            make my own version of Wordle. But for starters, I've made a copy of Wordle. Give it a try!
-          </p>
+          <div class="project-left-content">
+            <p class="project-name">Pathfinder</p>
+            <a href="http://pathfinder.fyi" target="_blank">Pathfinder Site</a>
+  
+            <p class="project-skills">HTML, CSS, JavaScript, React.js, wireframing, web responsiveness, data visualization</p>
+            <p>Pathfinder is an <b>online tech community platform</b> made to help students and professionals find their future careers.
+              In our testimonials section, users <b>share their experiences</b> and what they do on a day-to-day basis at their tech jobs.
+              The overview section lists out the skills needed for each job title.
+            </p>
+            <p>TigerLaunch 2022: Top 15 Finalist in the LA Regionals</p>
+            <p>At Pathfinder, I work closely with the UI/UX team to bring Figma designs to life, and to implement new features. Contributions
+              include: landing page, data visualization with bar charts, web responsiveness, (new) comments feature.
+            </p>
+  
+          </div>
+        </div>
+        <div class="project-right">
+            <iframe class="loom-video" src="https://www.loom.com/embed/4f61338f550248b3afaf6f366473e8f9" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen "></iframe>
+          <!-- <img class="project-1-pic" src="./img/projects/newPF.jpg" alt="Pathfinder.fyi"> -->
+        </div>
+      </div>
+      <!-- <div class="project-standard">
+        <div class="project-left">
+          <div class="project-left-content">
+            <p class="project-name">Wordle</p>
+            <span><a href="wordle/index.html" target="_blank">Live Site</a></span>
+            <span><a href="https://github.com/taujeng/wordle" target="_blank">Github</a></span>
+            <p class="project-skills">HTML, CSS, JavaScript, web responsiveness, virtual keyboard, DOM</p>
+            <p>Wordle, the popular word game that is being played all around the world!</p>
+            <p>Personally, I'd like to add some changes to Wordle, from better word curation to different modes, and so I set out to
+              make my own version of Wordle. But for starters, I've made a copy of Wordle. Give it a try!
+            </p>
+  
+          </div>
         </div>
         <div class="project-right">
           <img class="project-2-pic" src="./img/projects/wordle.jpg" alt="Pathfinder.fyi">
         </div>
-      </div>
+      </div> -->
     </div>
   </section>
   <section class="footer">
