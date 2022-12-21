@@ -45,9 +45,9 @@ body {
   position: fixed;
   top: 0;
   z-index: 10;
-  box-shadow: 1px 11px 14px -1px rgba(0, 0, 0, 0.75);
+  /* box-shadow: 1px 11px 14px -1px rgba(0, 0, 0, 0.75);
   -webkit-box-shadow: 1px 11px 14px -1px rgba(0, 0, 0, 0.75);
-  -moz-box-shadow: 1px 11px 14px -1px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 1px 11px 14px -1px rgba(0, 0, 0, 0.75); */
 }
 
 .menu {
@@ -201,7 +201,9 @@ label.logo {
 .section-title {
   color: var(--darkBlue-color);
   font-size: 40px;
-  padding-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 4px black solid;
+  margin-bottom: 50px;
 }
 
 /* OLD Navigation Bar/Header */
@@ -427,10 +429,12 @@ label.logo {
 .about {
   background: var(--green-color);
   display: flex;
-  align-items: center;
   flex-direction: column;
+  align-items: center;
   padding-top: 100px;
 }
+
+
 
 .about img {
   height: 350px;
@@ -439,20 +443,26 @@ label.logo {
   padding-bottom: 20px;
 }
 
-.about p {
+.about .about-text {
   font-size: 20px;
-  width: 100%;
-  text-align: left;
-  padding: 0 10% 10px 30%;
+  width: 40%;
+  /* text-align: left; */
+
 }
 
 #profile-img {
-  margin: 40px 0;
+  margin: 0px 0 40px;
 }
 
 /* Resume */
-#resume {
-  padding-top: 150px;
+.resume {
+  width: 100%;
+  background: var(--green-color);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 100px 20% 40px 20%;
+  border: none;
 }
 
 .resume-link {
@@ -467,6 +477,12 @@ label.logo {
 .resume-link:hover {
   transform: translateX(5px);
   font-style: italic;
+}
+
+.resume-irl {
+  height: 900px;
+  width: 800px;
+  border: none;
 }
 
 @media (max-width: 750px) {
@@ -556,9 +572,10 @@ label.logo {
 
 .project-standard {
   display: flex;
-  flex: 1;
+  width: 100%;
   flex-direction: row;
-  padding-bottom: 100px;
+  /* padding-bottom: 100px; */
+  justify-content: center;
 }
 
 .project-name {
@@ -576,8 +593,10 @@ label.logo {
 }
 
 .project-left {
-  width: 40%;
-  margin-left: 200px;
+  display: flex;
+  justify-content: center;
+  width: 70%;
+  margin-right: 50px;
 }
 
 .project-left h4 {
@@ -618,6 +637,19 @@ label.logo {
   border-radius: 5%;
   margin: 20px;
   margin-left: 250px;
+}
+
+.project-right {
+  display: flex;
+  justify-content: center;
+  margin-left: 50px;
+  width: 70%;
+}
+
+.project-right .loom-video {
+  height: 500px;
+  width: 80%;
+  margin-bottom: 100px;
 }
 
 @media (max-width: 750px) {
